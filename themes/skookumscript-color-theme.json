@@ -1,23 +1,27 @@
 {
 	"name": "skookumscript",
 	"type": "dark",
-	"colors": {
-		"editor.background": "#263238",
-		"editor.foreground": "#eeffff",
-		"activityBarBadge.background": "#007acc",
-		"sideBarTitle.foreground": "#bbbbbb"
-	},
 	"tokenColors": [
 		{
-			"name": "Comment",
+			"name": "Comment Block",
 			"scope": [
-				"comment.block.sk",
-				"punctuation.definition.comment.sk",
-				"comment.line.double-slash.sk"
+				"comment",
+				"punctuation.definition.comment",
 			],
 			"settings": {
 				"fontStyle": "italic",
-				"foreground": "#546E7A"
+				"foreground": "#80C4FF"
+			}
+		},
+		{
+			"name": "Comment Line",
+			"scope": [
+				"comment",
+				"comment.line"
+			],
+			"settings": {
+				"fontStyle": "italic",
+				"foreground": "#80B0FE"
 			}
 		},
 		{

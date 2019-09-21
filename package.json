@@ -10,22 +10,22 @@
     "contributes": {
         "languages": [
             {
-                "id": "skookumscript",
-                "aliases": ["SkookumScript", "skookumscript", "sk"],
+                "id": "skookum",
+                "aliases": ["skookumscript", "sk"],
                 "extensions": [".sk"],
                 "configuration": "./language-configuration.json"
             }
         ],
         "grammars": [
             {
-                "language": "skookumscript",
+                "language": "skookum",
                 "scopeName": "source.sk",
                 "path": "./syntaxes/skookumscript.tmLanguage.json"
             }
         ],
         "themes": [
             {
-                "label": "skookumscript",
+                "label": "skookum",
                 "uiTheme": "vs-dark",
                 "path": "./themes/skookumscript-color-theme.json"
             }

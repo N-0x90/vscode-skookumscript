@@ -64,20 +64,10 @@ repository:
       end: \*/
       endCaptures:
         '0': { name: punctuation.definition.comment.sk }
-    - begin: (^\s+)?(?=//)
+    - name: comment.line.sk
+      begin: (^\s+)?(?=//)
       beginCaptures:
         '1': { name: punctuation.whitespace.comment.leading.sk }
       end: (?=$)
-      # patterns:
-      # - name: comment.block.documentation.sk
-      #   begin: (?<!/)///(?!/)
-      #   beginCaptures:
-      #     '0': { name: punctuation.definition.comment.sk }
-      #   end: (?=$)
-      #   patterns:
-      #   - include: '#xml-doc-comment'
-      # - name: comment.line.double-slash.sk
-      #   begin: (?<!/)//(?:(?!/)|(?=//))
-      #   beginCaptures:
-      #     '0': { name: punctuation.definition.comment.cs }
-      #   end: (?=$)
+
+      
