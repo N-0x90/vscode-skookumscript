@@ -6,20 +6,13 @@
     "engines": {
         "vscode": "^1.38.0"
     },
-    "categories": [
-        "Programming Languages"
-    ],
+    "categories": ["Programming Languages"],
     "contributes": {
         "languages": [
             {
                 "id": "skookumscript",
-                "aliases": [
-                    "SkookumScript",
-                    "skookumscript"
-                ],
-                "extensions": [
-                    ".sk"
-                ],
+                "aliases": ["SkookumScript", "skookumscript", "sk"],
+                "extensions": [".sk"],
                 "configuration": "./language-configuration.json"
             }
         ],
@@ -32,7 +25,7 @@
         ],
         "themes": [
             {
-                "label": "themes",
+                "label": "skookumscript",
                 "uiTheme": "vs-dark",
                 "path": "./themes/skookumscript-color-theme.json"
             }

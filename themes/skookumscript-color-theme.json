@@ -1,5 +1,5 @@
 {
-	"name": "themes",
+	"name": "skookumscript",
 	"type": "dark",
 	"colors": {
 		"editor.background": "#263238",
@@ -11,8 +11,9 @@
 		{
 			"name": "Comment",
 			"scope": [
-				"comment",
-				"punctuation.definition.comment"
+				"comment.block.sk",
+				"punctuation.definition.comment.sk",
+				"comment.line.double-slash.sk"
 			],
 			"settings": {
 				"fontStyle": "italic",
