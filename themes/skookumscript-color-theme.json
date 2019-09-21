@@ -10,7 +10,7 @@
 			],
 			"settings": {
 				"fontStyle": "italic",
-				"foreground": "#80C4FF"
+				"foreground": "#b4d0fd"
 			}
 		},
 		{
@@ -21,9 +21,121 @@
 			],
 			"settings": {
 				"fontStyle": "italic",
-				"foreground": "#80B0FE"
+				"foreground": "#b4d0fd"
 			}
 		},
+		{
+			"name": "Conditional if",
+			"scope": [
+				"script-top-level",
+				"keyword.control.conditional.if",
+				"keyword.control.conditional.else"
+			],
+			"settings": {
+				"foreground": "#C4FFC4"
+			}
+		},
+		{
+			"name": "Numeric",
+			"scope": [
+				"constant.numeric",
+				"constant.numeric.decimal"
+			],
+			"settings": {
+				"foreground": "#2299ff"
+			}
+		},
+		{
+			"name": "Boolean literals",
+			"scope": [
+				"literal",
+				"constant.language.boolean.true",
+				"constant.language.boolean.false"
+			],
+			"settings": {
+				"foreground": "#c4ffc4"
+			}
+		},
+		{
+			"name": "String single quoted",
+			"scope": [
+				"literal",
+				"string.quoted.single",
+				"punctuation.definition.char.begin",
+				"punctuation.definition.char.end"
+			],
+			"settings": {
+				"foreground": "#e070b0"
+			}
+		},
+		{
+			"name": "String single quoted",
+			"scope": [
+				"literal",
+				"string.quoted.double",
+				"punctuation.definition.string.begin",
+				"punctuation.definition.string.end"
+			],
+			"settings": {
+				"foreground": "#ffb0e0"
+			}
+		},
+		{
+			"name": "Punctuation",
+			"scope": [
+				"punctuation.parenthesis.open",
+				"punctuation.parenthesis.close",
+				"punctuation.square-brackets.open",
+				"punctuation.square-brackets.close",
+				"punctuation.curly-brackets.open",
+				"punctuation.curly-brackets.close",
+				"punctuation.accessor",
+				"keyword.operators"
+			],
+			"settings": {
+				"foreground": "#00ff00"
+			}
+		},
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
 		{
 			"name": "Variables",
 			"scope": [
