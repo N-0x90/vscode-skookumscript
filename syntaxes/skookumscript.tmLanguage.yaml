@@ -1,0 +1,26 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+---
+name: SkookumScript
+scopeName: source.sk
+fileTypes: [sk]
+uuid: fff7b5ec-daec-459d-844d-4815557ba2f3
+
+patterns:
+- include: '#comment'
+- include: '#declarations'
+
+repository:
+  declarations:
+    patterns:
+    - include: '#type-declarations'
+
+  type-declarations:
+    patterns:
+    - include: '#comment'
+    # - include: '#storage-modifier'
+    # - include: '#class-declaration'
+    # - include: '#delegate-declaration'
+    # - include: '#enum-declaration'
+    # - include: '#interface-declaration'
+    # - include: '#struct-declaration'
+    # - include: '#attribute-section'

@@ -1,0 +1,44 @@
+{
+    "name": "skookumscript",
+    "displayName": "SkookumScript",
+    "description": "SkookumScript is a programming language and tool suite dedicated to the creation of gameplay in video games. With key game concepts built directly into the language, SkookumScript enables video game developers to quickly and easily convert their ideas into awe-inspiring interactivity, level design and AI. SkookumScript is the scripting solution for every genre of video game, on every platform, everywhere.",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.38.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "skookumscript",
+                "aliases": [
+                    "SkookumScript",
+                    "skookumscript"
+                ],
+                "extensions": [
+                    ".sk"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "skookumscript",
+                "scopeName": "source.sk",
+                "path": "./syntaxes/skookumscript.tmLanguage.json"
+            }
+        ],
+        "themes": [
+            {
+                "label": "themes",
+                "uiTheme": "vs-dark",
+                "path": "./themes/skookumscript-color-theme.json"
+            }
+        ]
+    },
+    "devDependencies": {
+        "js-yaml": "^3.13.1"
+    }
+}
