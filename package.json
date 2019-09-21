@@ -6,13 +6,20 @@
     "engines": {
         "vscode": "^1.38.0"
     },
-    "categories": ["Programming Languages"],
+    "categories": [
+        "Programming Languages"
+    ],
     "contributes": {
         "languages": [
             {
                 "id": "skookum",
-                "aliases": ["skookumscript", "sk"],
-                "extensions": [".sk"],
+                "aliases": [
+                    "skookumscript",
+                    "sk"
+                ],
+                "extensions": [
+                    ".sk"
+                ],
                 "configuration": "./language-configuration.json"
             }
         ],
@@ -32,6 +39,7 @@
         ]
     },
     "devDependencies": {
-        "js-yaml": "^3.13.1"
+        "gulp": "^4.0.2",
+        "gulp-yaml": "^2.0.4"
     }
 }
