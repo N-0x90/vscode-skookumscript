@@ -29,7 +29,8 @@
 			"scope": [
 				"script-top-level",
 				"keyword.control.conditional.if",
-				"keyword.control.conditional.else"
+				"keyword.control.conditional.else",
+				"keywords.control"
 			],
 			"settings": {
 				"foreground": "#C4FFC4"
@@ -96,8 +97,24 @@
 				"foreground": "#00ff00"
 			}
 		},
-
-
+		{
+			"name": "Data",
+			"scope": [
+				"data-name.class-instance"
+			],
+			"settings": {
+				"foreground": "#c7c1ff"
+			}
+		},
+		{
+			"name": "Data class instance",
+			"scope": [
+				"data-name.instance"
+			],
+			"settings": {
+				"foreground": "#9988ff"
+			}
+		},
 
 
 

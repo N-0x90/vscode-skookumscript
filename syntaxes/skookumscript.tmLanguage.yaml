@@ -37,9 +37,9 @@ repository:
     # - include: '#do-statement'
     # - include: '#for-statement'
     # - include: '#foreach-statement'
-    - include: '#keyword-control'
-    # - include: '#if-statement'
-    # - include: '#else-part'
+    - include: '#keywords'
+    - include: '#if-statement'
+    - include: '#else-part'
     # - include: '#switch-statement'
     # - include: '#goto-statement'
     # - include: '#return-statement'
@@ -90,6 +90,7 @@ repository:
     # - include: '#initializer-expression'
     # - include: '#identifier'
     - include: "#punctuation-accessor"
+    - include: "#data-name"
 
   comment:
     patterns:
@@ -106,38 +107,41 @@ repository:
         '1': { name: punctuation.whitespace.comment.leading.sk }
       end: (?=$)
 
-  keyword-control:
+  keywords:
     patterns:
-    - name: keyword.control.conditional.if.sk
-      match: (?<!\.)\b(if)\b
-    - name: keyword.control.conditional.else.sk
-      match: (?<!\.)\b(else)\b
-    #- include: '#expression'
+    - name: keywords.control.sk
+      match: (?<!\.)\b(when|unless|case|sync|race|branch|change|exit|loop|nil|this|this_class|this_code|this_mind)\b
 
-  # if-statement:
-  #   begin: (?<!\.)\b(if).*?(?=\[)
-  #   beginCaptures:
-  #     '1': { name: keyword.control.conditional.if.sk }
-  #   end: (?<=\])|(?=;)
+  # keyword-control:
   #   patterns:
-  #   # - begin: \s
-  #   #   beginCaptures:
-  #   #     '0': { name: punctuation.parenthesis.open.sk }
-  #   #   end: \[
-  #   #   endCaptures:
-  #   #     '0': { name: punctuation.parenthesis.close.sk }
-  #   #   patterns:
-  #   #   - include: '#expression'
-  #   - include: '#statement'
-  #   - include: '#statement'
+  #   - name: keyword.control.conditional.if.sk
+  #     match: (?<!\.)\b(if)\b
+  #   - name: keyword.control.conditional.else.sk
+  #     match: (?<!\.)\b(else)\b
 
-  # else-part:
-  #   begin: (?<!\.)\b(else)\b
-  #   beginCaptures:
-  #     '1': { name: keyword.control.conditional.else.sk }
-  #   end: (?<=\])|(?=;)
-  #   patterns:
-  #   - include: '#statement'
+  if-statement:
+    begin: (?<!\.)\b(if)\b\s*(?=\s{1})
+    beginCaptures:
+      '1': { name: keyword.control.conditional.if.sk }
+    end: (?<=\])
+    patterns:
+    # - begin: \(
+    #   beginCaptures:
+    #     '0': { name: punctuation.parenthesis.open.sk }
+    #   end: \)
+    #   endCaptures:
+    #     '0': { name: punctuation.parenthesis.close.sk }
+    #   patterns:
+    #   - include: '#expression'
+    - include: '#statement'
+
+  else-part:
+    begin: (?<!\.)\b(else)\b
+    beginCaptures:
+      '1': { name: keyword.control.conditional.else.sk }
+    end: (?<=\])
+    patterns:
+    - include: '#statement'
 
   literal:
     patterns:
@@ -247,9 +251,19 @@ repository:
     - include: '#expression'
 
   operators:
-    name: keyword.operators.sk
-    match: (?<!=|!)((?:=|\+|-|\*|/|%|&|\||\^|\<|\>|:|!|~))
+    patterns:
+    - name: keyword.operators.sk
+      match: (?<!=|!)(?:=|\+|-|\*|/|%|&|\^|\<|\>|:|!|~)
+    - name: keyword.operators.named.sk
+      match: (?<!=|!)\b(?:=|and|or|xor|nand|nor|nxor|not)\b
 
   punctuation-accessor:
     name: punctuation.accessor.sk
     match: \.
+
+  data-name:
+    patterns:
+    - name: data-name.instance.sk
+      match: (?<!\.)\@\W\W\w+\W?
+    - name: data-name.class-instance.sk
+      match: (?<!\.)\@\@\W?\W?\w+
