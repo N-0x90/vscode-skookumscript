@@ -5,19 +5,19 @@
 		{
 			"name": "Comment Block",
 			"scope": [
-				"comment",
+				"comment.block",
 				"punctuation.definition.comment",
 			],
 			"settings": {
 				"fontStyle": "italic",
-				"foreground": "#b4d0fd"
+				"foreground": "#80b0fe"
 			}
 		},
 		{
 			"name": "Comment Line",
 			"scope": [
-				"comment",
-				"comment.line"
+				"comment.line",
+				"punctuation.whitespace.comment.leading"
 			],
 			"settings": {
 				"fontStyle": "italic",
