@@ -9,6 +9,10 @@
     "categories": [
         "Programming Languages"
     ],
+    "activationEvents": [
+        "onCommand:extension.sk.repl"
+    ],
+    "main": "./out/extension",
     "contributes": {
         "languages": [
             {
@@ -36,10 +40,60 @@
                 "uiTheme": "vs-dark",
                 "path": "./themes/skookumscript-color-theme.json"
             }
-        ]
+        ],
+        "commands": [
+            {
+                "command": "extension.sk.repl",
+                "title": "SkookumScript REPL"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "extension.sk.repl",
+                "key": "F4",
+                "mac": "F4",
+                "when": "editorTextFocus"
+            }
+        ],
+        "configuration": {
+            "type": "object",
+            "title": "Skookum REPL Configuration",
+            "properties": {
+                "sk.connectType": {
+                    "type": "string",
+                    "default": "sockets"
+                },
+                "sk.serverPort": {
+                    "type": "number",
+                    "default": 12357
+                },
+                "sk.serverHost": {
+                    "type": "string",
+                    "default": "127.0.0.1"
+                }
+            }
+        }
     },
+    "scripts": {
+		"prepublish": "tsc -p ./src",
+		"compile": "tsc -p ./src",
+		"tslint": "tslint ./src/**/*.ts",
+		"watch": "tsc -w -p ./src",
+		"test": "mocha -u tdd ./out/tests/",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"package": "vsce package",
+		"publish": "vsce publish"
+	},
     "devDependencies": {
         "gulp": "^4.0.2",
-        "gulp-yaml": "^2.0.4"
+        "gulp-yaml": "^2.0.4",
+        "@types/mocha": "5.2.5",
+        "@types/node": "8.9.3",
+        "mocha": "5.2.0",
+        "tslint": "5.20.0",
+        "typescript": "3.1.6",
+        "vsce": "1.53.2",
+        "vscode": "^1.1.29",
+        "vscode-debugadapter-testsupport": "1.33.0"
     }
 }
