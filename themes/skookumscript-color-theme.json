@@ -1,6 +1,9 @@
 {
 	"name": "skookumscript",
 	"type": "dark",
+	"colors": {
+		"editor.foreground": "#fefefe",
+	},
 	"tokenColors": [
 		{
 			"name": "Comment Block",
@@ -115,7 +118,15 @@
 				"foreground": "#9988ff"
 			}
 		},
-
+		{
+			"name": "Skookum types",
+			"scope": [
+				"type.skookum"
+			],
+			"settings": {
+				"foreground": "#ffff80"
+			}
+		},
 
 
 
